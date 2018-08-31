@@ -8,7 +8,8 @@ apt-get install net-tools
 
 apt-get update && apt-get upgrade -y
 
-#install packeges needs
+#install packeges required 
+
 apt-get install -y build-essential linux-headers-`uname -r`
 
 apt-get install -y openssh-server apache2 bison flex libmariadb-dev
