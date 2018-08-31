@@ -70,6 +70,16 @@ make
 
 make install
 
+#install asterisk
+
+tar xvfz asterisk*
+
+cd asterisk*
+
+./contrib/scripts/install_prereq install && ./bootstrap.sh
+
+./configure && make menuselect && make && make install && make config && make samples
+
 
 #install pjproject
 
