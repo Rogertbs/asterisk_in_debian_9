@@ -80,39 +80,6 @@ cd asterisk*
 
 ./configure && make menuselect && make && make install && make config && make samples
 
-
-#install pjproject
-
-cd /usr/src
-
-tar -xjvf pjproject-2.6.tar.bz2
-
-cd pjproject-2.6
-
-CFLAGS='-DPJ_HAS_IPV6=1' ./configure --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr
-
-make dep
-
-make
-
-make install
-
-#install jansson
-
-cd /usr/src
-
-tar vxfz jansson.tar.gz
-
-cd jansson-*
-
-autoreconf -i
-
-./configure
-
-make
-
-make install
-
 #configure ODBC
 
 cat >> /etc/odbcinst.ini << EOF
